@@ -22,7 +22,7 @@ export default mongoose.model("FoodItem", FoodItemSchema);
 //     "carbs":5,
 //     "protien":3.3,
 //     "fat":4,
-//     "acceptedUnits":["ml","l"],
+//     "acceptedUnits":"ml",
 //     "itemWeight":100
 // },
 // {
@@ -31,7 +31,7 @@ export default mongoose.model("FoodItem", FoodItemSchema);
 //     "carbs":0,
 //     "protien":12,
 //     "fat":11,
-//     "acceptedUnits":["item"],
+//     "acceptedUnits":"item",
 //     "itemWeight":100
 // },
 // {
@@ -40,6 +40,7 @@ export default mongoose.model("FoodItem", FoodItemSchema);
 //     "carbs":0,
 //     "protien":25,
 //     "fat":25,
-//     "acceptedUnits":["g","kg"],
+//     "acceptedUnits":"g"
 //     "itemWeight":100
 // }
+//
