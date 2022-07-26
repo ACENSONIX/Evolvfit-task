@@ -23,11 +23,13 @@ export const GetMeals = async (req, res) => {
 
 export const UpdateMeal = async (req, res) => {
   try {
-    const meal = await Meal.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
+    // const meal = await Meal.findByIdAndUpdate(req.body.mealID, req.body, {
+    //   new: true,
+    // });
+    // const id = req.body.mealID;
+    // const meal = await Meal.find({ _id: id });
     res.status(200).json(meal);
-    console.log("Meal updated");
+    console.log(req.body);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }

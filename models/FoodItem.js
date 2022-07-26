@@ -42,5 +42,58 @@ export default mongoose.model("FoodItem", FoodItemSchema);
 //     "fat":25,
 //     "acceptedUnits":"g"
 //     "itemWeight":100
+// },
+// {
+//     "name":"apple",
+//     "calories":56 ,
+//     "carbs":12,
+//     "protien":0.3,
+//     "fat":0,
+//     "acceptedUnits":"g"
+//     "itemWeight":100
+// },
+// {
+//     "name":"banana",
+//     "calories":80 ,
+//     "carbs":20,
+//     "protien":1,
+//     "fat":0,
+//     "acceptedUnits":"g",
+//     "itemWeight":100
+// },
+// {
+//     "name":"rice",
+//     "calories":120 ,
+//     "carbs":30,
+//     "protien":2,
+//     "fat":0,
+//     "acceptedUnits":"g"
+//     "itemWeight":100
 // }
-//
+// {
+//     "name":"bread",
+//     "calories":230 ,
+//     "carbs":50,
+//     "protien":8,
+//     "fat":2,
+//     "acceptedUnits":"g"
+//     "itemWeight":100
+// },
+// {
+//     "name":"fish",
+//     "calories":200 ,
+//     "carbs":8,
+//     "protien":20,
+//     "fat":10,
+//     "acceptedUnits":"g"
+//     "itemWeight":100
+// },
+// {
+//     "name":"cucumber",
+//     "calories":10,
+//     "carbs":2,
+//     "protien":0.6,
+//     "fat":0,
+//     "acceptedUnits":"g"
+//     "itemWeight":100
+// },
