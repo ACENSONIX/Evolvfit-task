@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
-app.use("/api/foodItems", FoodItemRouter);
+app.use("/foodItems", FoodItemRouter);
 app.use(cors());
 // app.use("/api/meals", FoodItemRouter);
 
@@ -23,8 +23,10 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
     console.log("Connected to MongoDB");
-    console.log(`Server running on port ${PORT}`);
   })
   .catch((err) => {
     console.log(err.message);

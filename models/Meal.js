@@ -1,9 +1,13 @@
 import mongoose from "mongoose";
 
 const MealSchema = new mongoose.Schema({
-  category: [String],
+  category: {
+    type: String,
+    enum: ["breakfast", "lunch", "dinner", "snack"],
+    default: "breakfast",
+  },
   name: String,
-  foodItems: [
+  mealItems: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "FoodItem",
