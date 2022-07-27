@@ -3,7 +3,7 @@ import { addFoodItem, getItems } from "../controllers/FoodItem.js";
 
 const router = express.Router();
 
-router.post("/addItem", addFoodItem);
-router.get("/getItems", getItems);
+router.post("/Item", addFoodItem);
+router.get("/Items", getItems);
 
 export default router;

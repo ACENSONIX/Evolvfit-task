@@ -4,6 +4,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import FoodItemRouter from "./routes/FoodItem.js";
 import MealRouter from "./routes/Meals.js";
+import UserRouter from "./routes/User.js";
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 app.use("/foodItems", FoodItemRouter);
 app.use("/meals", MealRouter);
+app.use("/user", UserRouter);
 app.use(cors());
 // app.use("/api/meals", FoodItemRouter);
 
@@ -33,3 +35,6 @@ mongoose
   .catch((err) => {
     console.log(err.message);
   });
+
+//Populate Meal Items for user
+//
