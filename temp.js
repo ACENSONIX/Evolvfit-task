@@ -95,12 +95,12 @@ function OptimiseMeal(maxcalories, foodItems) {
       curr_protien += foodItem.protien;
     }
   }
+
   while (curr_calories < maxcalories) {
-    var foodItem = foodItems[i];
+    var foodItem = foodItems[0];
     meal.mealItems.push(foodItem);
     curr_calories += foodItem.calories;
     curr_protien += foodItem.protien;
-    i++;
   }
 
   console.log(curr_calories, curr_protien);

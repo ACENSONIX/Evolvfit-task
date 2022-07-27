@@ -15,7 +15,7 @@ export const CreateUser = async (req, res) => {
 
 export const UpdateUser = async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id } = req.params;
     const { meals } = req.body;
     const user = await User.findByIdAndUpdate(
       id,
@@ -43,9 +43,17 @@ export const GetUsers = async (req, res) => {
 };
 
 export const GetMeals = async (req, res) => {
-  const { Userid } = req.query;
+  const { id } = req.params;
   try {
-    const user = await User.findById({ _id: Userid }).populate("meals.meal");
+    const user = await User.findById({ _id: id })
+      .populate("meals.meal")
+      .populate({
+        path: "meals.meal",
+        populate: {
+          path: "mealItems",
+        },
+      });
+
     res.status(200).json(user);
     console.log(user);
   } catch (error) {

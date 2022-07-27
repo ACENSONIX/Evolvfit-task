@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.post("/create", CreateMeal);
 router.get("/get-all", GetMeals);
-router.patch("/update/", UpdateMeal);
+router.patch("/update/:id", UpdateMeal);
 router.post("/optimise", Optimise);
 
 // router.post("/protienMeal",);

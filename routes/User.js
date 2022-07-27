@@ -8,8 +8,8 @@ import {
 const router = express.Router();
 
 router.post("/create", CreateUser);
-router.patch("/update/", UpdateUser);
+router.patch("/update/:id", UpdateUser);
 router.get("/get-all", GetUsers);
-router.get("/get-meals", GetMeals);
+router.get("/get-meals/:id", GetMeals);
 
 export default router;

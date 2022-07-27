@@ -26,12 +26,12 @@ export const GetMeals = async (req, res) => {
 
 export const UpdateMeal = async (req, res) => {
   try {
-    const { id } = req.query;
+    const id = req.params.id;
 
     const meal = await Meal.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    console.log(id);
+    console.log(req.params.id);
     res.status(200).send(meal);
     // console.log(req.body);
   } catch (error) {
